@@ -1,0 +1,38 @@
+<script>
+	import Item from './Item.svelte';
+	export let isActive;
+	export let menuData;
+</script>
+
+<ul class="list" class:active={isActive}>
+	{#each menuData as { id, link, title } (id)}
+		<Item {title} {link} />
+	{/each}
+</ul>
+
+<style>
+	.list {
+		display: none;
+		position: absolute;
+		width: 100%;
+		background-color: tomato;
+		left: 0;
+		top: calc(100% - 10px);
+		padding: 20px;
+		justify-content: space-around;
+	}
+
+	.active {
+		display: flex;
+	}
+
+	@media (min-width: 1000px) {
+		.list {
+			display: flex;
+			position: relative;
+			background-color: transparent;
+			width: fit-content;
+			padding: 0;
+		}
+	}
+</style>

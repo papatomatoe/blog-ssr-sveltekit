@@ -1,0 +1,161 @@
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	min-width: 320px;
+	font-family: 'Roboto Slab', serif;
+	color: #181818;
+	background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+button,
+input,
+textarea {
+	font-family: inherit;
+}
+a {
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#root {
+	height: inherit;
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+}
+
+.visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+
+	border: 0;
+
+	clip: rect(0 0 0 0);
+}
+.posts__loader {
+	margin: auto;
+	text-align: center;
+	padding: 100px 0 80px;
+	font-weight: 700;
+	color: burlywood;
+}
+.posts__error {
+	margin: auto;
+	text-align: center;
+	padding: 100px 0 80px;
+	font-weight: 700;
+	color: tomato;
+}
+.posts__empty {
+	margin: auto;
+	text-align: center;
+	font-size: 22px;
+	padding: 100px 0 80px;
+	font-weight: 700;
+	color: #808080;
+}
+.add-post__error {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	height: 100px;
+	background-color: tomato;
+	box-shadow: 0 5px 25px -10px #000;
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+}
+.add-post__error--active {
+	display: flex;
+}
+.add-post__error p {
+	margin-bottom: 10px;
+}
+.add-post__error p:last-of-type {
+	margin-bottom: 0;
+}
+
+.description p {
+	position: relative;
+	margin-bottom: 40px;
+	padding-left: 20px;
+}
+.description p:last-of-type {
+	margin-bottom: 0;
+}
+
+.button {
+	width: 100%;
+	padding: 10px;
+	background-color: tomato;
+	border-radius: 6px;
+	border: 3px solid tomato;
+	color: #fff;
+
+	font-weight: 700;
+}
+.button:disabled {
+	opacity: 0.5;
+}
+
+.section__heading {
+	padding-bottom: 25px;
+	border-bottom: 2px solid #808080;
+}
+
+.post__content {
+	padding-top: 20px;
+	border-top: 1px solid gray;
+}
+
+.post__content p {
+	margin-bottom: 40px;
+}
+
+.post__content img {
+	display: block;
+	margin: 0 auto;
+}
+
+.post__content a {
+	color: tomato;
+	text-decoration: underline;
+}
